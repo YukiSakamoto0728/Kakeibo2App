@@ -42,143 +42,164 @@
         {
             lblTitle = new Label();
             txtTitle = new TextBox();
-
             lblCategory = new Label();
             cmbCategory = new ComboBox();
-
             lblAmount = new Label();
             numAmount = new NumericUpDown();
-
             lblMemo = new Label();
             txtMemo = new TextBox();
-
             lblDate = new Label();
             dtpDate = new DateTimePicker();
-
             btnAdd = new Button();
-
             dgvIncome = new DataGridView();
-
             btnPrevPage = new Button();
             btnNextPage = new Button();
             lblPage = new Label();
-
             ((System.ComponentModel.ISupportInitialize)numAmount).BeginInit();
             ((System.ComponentModel.ISupportInitialize)dgvIncome).BeginInit();
-
             SuspendLayout();
-
-            //
-            // タイトル
-            //
-            lblTitle.Text = "タイトル";
+            // 
+            // lblTitle
+            // 
             lblTitle.Location = new Point(20, 20);
-
+            lblTitle.Name = "lblTitle";
+            lblTitle.Size = new Size(100, 23);
+            lblTitle.TabIndex = 0;
+            lblTitle.Text = "タイトル";
+            // 
+            // txtTitle
+            // 
             txtTitle.Location = new Point(20, 45);
-            txtTitle.Size = new Size(180, 27);
-
-            //
-            // カテゴリ
-            //
-            lblCategory.Text = "カテゴリ";
+            txtTitle.Name = "txtTitle";
+            txtTitle.Size = new Size(180, 23);
+            txtTitle.TabIndex = 1;
+            // 
+            // lblCategory
+            // 
             lblCategory.Location = new Point(220, 20);
-
+            lblCategory.Name = "lblCategory";
+            lblCategory.Size = new Size(100, 23);
+            lblCategory.TabIndex = 2;
+            lblCategory.Text = "カテゴリ";
+            // 
+            // cmbCategory
+            // 
             cmbCategory.Location = new Point(220, 45);
-            cmbCategory.Size = new Size(150, 28);
-
-            //
-            // 金額
-            //
-            lblAmount.Text = "金額";
+            cmbCategory.Name = "cmbCategory";
+            cmbCategory.Size = new Size(150, 23);
+            cmbCategory.TabIndex = 3;
+            // 
+            // lblAmount
+            // 
             lblAmount.Location = new Point(390, 20);
-
+            lblAmount.Name = "lblAmount";
+            lblAmount.Size = new Size(100, 23);
+            lblAmount.TabIndex = 4;
+            lblAmount.Text = "金額";
+            // 
+            // numAmount
+            // 
             numAmount.Location = new Point(390, 45);
-            numAmount.Maximum = 999999999;
-
-            //
-            // メモ
-            //
-            lblMemo.Text = "メモ";
+            numAmount.Maximum = new decimal(new int[] { 999999999, 0, 0, 0 });
+            numAmount.Name = "numAmount";
+            numAmount.Size = new Size(120, 23);
+            numAmount.TabIndex = 5;
+            // 
+            // lblMemo
+            // 
             lblMemo.Location = new Point(560, 20);
-
+            lblMemo.Name = "lblMemo";
+            lblMemo.Size = new Size(100, 23);
+            lblMemo.TabIndex = 6;
+            lblMemo.Text = "メモ";
+            // 
+            // txtMemo
+            // 
             txtMemo.Location = new Point(560, 45);
-            txtMemo.Size = new Size(250, 27);
-
-            //
-            // 日付
-            //
-            lblDate.Text = "日付";
+            txtMemo.Name = "txtMemo";
+            txtMemo.Size = new Size(250, 23);
+            txtMemo.TabIndex = 7;
+            // 
+            // lblDate
+            // 
             lblDate.Location = new Point(830, 20);
-
+            lblDate.Name = "lblDate";
+            lblDate.Size = new Size(100, 23);
+            lblDate.TabIndex = 8;
+            lblDate.Text = "日付";
+            // 
+            // dtpDate
+            // 
             dtpDate.Location = new Point(830, 45);
-            dtpDate.Size = new Size(200, 27);
-
-            //
-            // 登録ボタン
-            //
-            btnAdd.Text = "追加";
+            dtpDate.Name = "dtpDate";
+            dtpDate.Size = new Size(200, 23);
+            dtpDate.TabIndex = 9;
+            // 
+            // btnAdd
+            // 
             btnAdd.Location = new Point(1060, 40);
+            btnAdd.Name = "btnAdd";
             btnAdd.Size = new Size(120, 35);
-
-            //
-            // DataGridView
-            //
-            dgvIncome.Location = new Point(20, 110);
-            dgvIncome.Size = new Size(1200, 600);
-
+            btnAdd.TabIndex = 10;
+            btnAdd.Text = "追加";
+            // 
+            // dgvIncome
+            // 
             dgvIncome.AllowUserToAddRows = false;
+            dgvIncome.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
+            dgvIncome.Location = new Point(20, 108);
+            dgvIncome.Name = "dgvIncome";
             dgvIncome.ReadOnly = true;
-            dgvIncome.SelectionMode =
-                DataGridViewSelectionMode.FullRowSelect;
-
-            dgvIncome.AutoSizeColumnsMode =
-                DataGridViewAutoSizeColumnsMode.Fill;
-
-            //
-            // ページング
-            //
+            dgvIncome.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
+            dgvIncome.Size = new Size(1200, 275);
+            dgvIncome.TabIndex = 11;
+            // 
+            // btnPrevPage
+            // 
+            btnPrevPage.Location = new Point(900, 405);
+            btnPrevPage.Name = "btnPrevPage";
+            btnPrevPage.Size = new Size(75, 23);
+            btnPrevPage.TabIndex = 12;
             btnPrevPage.Text = "前へ";
-            btnPrevPage.Location = new Point(900, 730);
-
-            lblPage.Text = "1 / 1";
-            lblPage.AutoSize = true;
-            lblPage.Location = new Point(1020, 738);
-
+            // 
+            // btnNextPage
+            // 
+            btnNextPage.Location = new Point(1080, 405);
+            btnNextPage.Name = "btnNextPage";
+            btnNextPage.Size = new Size(75, 23);
+            btnNextPage.TabIndex = 14;
             btnNextPage.Text = "次へ";
-            btnNextPage.Location = new Point(1080, 730);
-
-            //
+            // 
+            // lblPage
+            // 
+            lblPage.AutoSize = true;
+            lblPage.Location = new Point(1020, 413);
+            lblPage.Name = "lblPage";
+            lblPage.Size = new Size(30, 15);
+            lblPage.TabIndex = 13;
+            lblPage.Text = "1 / 1";
+            // 
             // IncomePage
-            //
+            // 
             Controls.Add(lblTitle);
             Controls.Add(txtTitle);
-
             Controls.Add(lblCategory);
             Controls.Add(cmbCategory);
-
             Controls.Add(lblAmount);
             Controls.Add(numAmount);
-
             Controls.Add(lblMemo);
             Controls.Add(txtMemo);
-
             Controls.Add(lblDate);
             Controls.Add(dtpDate);
-
             Controls.Add(btnAdd);
-
             Controls.Add(dgvIncome);
-
             Controls.Add(btnPrevPage);
             Controls.Add(lblPage);
             Controls.Add(btnNextPage);
-
             Name = "IncomePage";
             Size = new Size(1400, 900);
-
             ((System.ComponentModel.ISupportInitialize)numAmount).EndInit();
             ((System.ComponentModel.ISupportInitialize)dgvIncome).EndInit();
-
             ResumeLayout(false);
             PerformLayout();
         }

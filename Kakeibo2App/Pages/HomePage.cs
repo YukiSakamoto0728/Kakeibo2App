@@ -64,35 +64,18 @@ namespace Kakeibo2App.Pages
                 })
                 .ToList();
 
-            var chart =
-                new CartesianChart
+            var chart = new PieChart
+            {
+                Dock = DockStyle.Fill,
+
+                Series = incomeData.Select(x => new PieSeries<int>
                 {
-                    Dock = DockStyle.Fill,
+                    Values = new[] { x.Amount },
 
-                    Series =
-                    new ISeries[]
-                    {
-                        new ColumnSeries<int>
-                        {
-                            Values =
-                                incomeData
-                                .Select(x => x.Amount)
-                                .ToArray()
-                        }
-                    },
-
-                    XAxes =
-                    new Axis[]
-                    {
-                        new Axis
-                        {
-                            Labels =
-                                incomeData
-                                .Select(x => x.Category)
-                                .ToArray()
-                        }
-                    }
-                };
+                    Name = x.Category
+                })
+                    .ToArray()
+            };
 
             pnlIncomeChart.Controls.Add(chart);
         }
@@ -122,9 +105,9 @@ namespace Kakeibo2App.Pages
                         Values = new[] { x.Amount },
 
                         Name = x.Category
-                })
+                    })
                     .ToArray()
-        };
+                };
 
             pnlExpenseChart.Controls.Add(chart);
         }
